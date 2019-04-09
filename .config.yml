@@ -1,0 +1,95 @@
+version: "0.1"
+info:
+    Home:
+        TOP:
+            title:
+                - 'Swagger_Spec_Loader'
+        CENTER:
+            title:
+                - 'Data & Param Setting'
+    End Point:
+        CENTER:
+            title:
+                - 'End Point List'
+content:
+    Home:
+        CENTER:
+            Data & Param Setting:
+                Set_Param:
+                    type: 'param_list'
+                    funcopt:
+                        tableName: 'set_param'
+                        coloName:
+                            - 'Param'
+                            - 'Data'
+                        buttonType:
+                            - 'Add'
+                            - 'Edit'
+                            - 'Remove'
+                    text: 'Please enter the parameter to be fixed.'
+                Set_Header:
+                    type: 'param_list'
+                    funcopt:
+                        tableName: 'set_head'
+                        coloName:
+                            - 'Header'
+                            - 'Data'
+                        buttonType:
+                            - 'Add'
+                            - 'Edit'
+                            - 'Remove'
+                    text: 'Please enter the header to be set.'
+                Set_Token:
+                    type: 'param_list'
+                    funcopt:
+                        tableName: 'auth_token'
+                        coloName:
+                            - 'Auth_Type'
+                            - 'Token'
+                        buttonType:
+                            - 'Add'
+                            - 'Edit'
+                            - 'Remove'
+                    text: 'Please enter the token required for authentication.Auth Type : (Bearer|Basec|etc...)'
+                Select Yaml:
+                    type: 'file_chooser'
+                    funcopt:
+                        file:
+                            - "yml"
+                            - "yaml"
+                        FNfilter: "Swagger Yaml File"
+                    text: 'Please select swagger''s yml.'
+                Load Data:
+                    type: 'file_loader'
+                    funcopt:
+                        FNfilter: "Load Data"
+                        tableName: 'end_point'
+                        coloName:
+                            - '#'
+                            - 'Host'
+                            - 'Method'
+                            - 'Base Path'
+                            - 'End Point'
+                            - 'Query'
+                            - 'Header'
+                            - 'Body'
+                    text: 'Load Swagger Spec'
+    End Point:
+        CENTER:
+            End Point List:
+                End Point:
+                    type: 'param_list'
+                    funcopt:
+                        tableName: 'end_point'
+                        coloName:
+                            - '#'
+                            - 'Host'
+                            - 'Method'
+                            - 'Base Path'
+                            - 'End Point'
+                            - 'Query'
+                            - 'Header'
+                            - 'Body'
+                        is_show: True
+                        buttonType: []
+                    text: 'Please enter the token required for authentication.Auth Type : (Bearer|Basec|etc...)'
